@@ -1202,4 +1202,11 @@ display: block;
 .portfolio-info:hover .portfolio-text-scroll {
   transform: translateY(0);
 }
+
+  .footer-wrapp {
+align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
 }
