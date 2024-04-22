@@ -676,6 +676,27 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .hero-section {
+    max-width: 768px;
+    padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/herotab1x.jpg);
+  }
+
+  @media screen and (min-resolution: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/herotab2x.jpg);
+    }
+  }
   .nav-link {
     font-weight: 500;
     font-size: 16px;
@@ -773,7 +794,6 @@ img {
     justify-content: center;
     gap: 24px;
   }
-  
 
   .portfolio-list {
     display: flex;
@@ -1034,35 +1054,9 @@ img {
       border 250ms cubic-bezier(0.4, 0, 0.2, 1),
       fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-
-  .hero-section {
-    max-width: 768px;
-    padding: 112px 0;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/herotab1x.jpg);
-  }
-
-  @media screen and (min-resolution: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero-section {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/herotab2x.jpg);
-    }
-  }
 }
 
 @media screen and (min-width: 1158px) {
-  .nav-list {
-    margin-right: 332px;
-  }
-
   .hero-section {
     max-width: 1440px;
     padding: 188px 0;
@@ -1084,6 +1078,11 @@ img {
         url(../images/herodesktop2x.jpg);
     }
   }
+
+  .nav-list {
+    margin-right: 332px;
+  }
+
   .hero-title {
     margin: 0 auto 48px auto;
   }
@@ -1142,71 +1141,71 @@ img {
   }
 
   .portfolio-list-wrap {
-  position: relative;
-  overflow: hidden;
-}
+    position: relative;
+    overflow: hidden;
+  }
 
   .portfolio-text-scroll {
-  position: absolute;
-  top: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  padding: 40px 32px;
-  background-color: #4d5ae5;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-display: block;
-}
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  margin-bottom: 0;
-  row-gap: 48px;
-}
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    margin-bottom: 0;
+    row-gap: 48px;
+  }
 
-.portfolio-wrap {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-}
+  .portfolio-wrap {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+  }
 
-.portfolio-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+  .portfolio-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 
-.portfolio {
-  margin-bottom: 72px;
-}
+  .portfolio {
+    margin-bottom: 72px;
+  }
 
-.portfolio-title {
-  margin-bottom: 8px;
-}
+  .portfolio-title {
+    margin-bottom: 8px;
+  }
 
-.portfolio-info {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: calc((100% - 48px) / 3);
-}
+  .portfolio-info {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc((100% - 48px) / 3);
+  }
 
-.portfolio-info:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+  .portfolio-info:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
 
-.portfolio-info:hover .portfolio-text-scroll {
-  transform: translateY(0);
-}
+  .portfolio-info:hover .portfolio-text-scroll {
+    transform: translateY(0);
+  }
 
   .footer-wrapp {
-align-items: baseline;
+    align-items: baseline;
     flex-direction: row;
     justify-content: space-between;
-
   }
 }
