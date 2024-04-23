@@ -301,6 +301,8 @@ img {
   display: none;
 }
 .portfolio-info {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-wrap {
@@ -356,6 +358,13 @@ img {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 288px;
+}
+
+.footer-logo-left {
+  margin-bottom: 72px;
+}
+
+.footer-logo-right {
   margin-bottom: 72px;
 }
 
@@ -363,7 +372,6 @@ img {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 72px;
 }
 
 .footer-right-network {
@@ -669,7 +677,7 @@ img {
   justify-content: center;
   align-items: center;
   position: relative;
- flex-shrink: 0;
+  flex-shrink: 0;
   margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -775,11 +783,12 @@ img {
   }
 
   .advantages-list {
-    gap: 24px 72px;
+    column-gap: 24px;
+    row-gap: 72px;
   }
 
   .advantages-item {
-    width: calc((100% - 72px) / 2);
+    max-width: 356px;
   }
 
   .advantages-list {
@@ -793,7 +802,7 @@ img {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 24px;
+    gap: 64px 24px;
   }
 
   .portfolio-list {
@@ -812,7 +821,13 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     text-align: justify;
-    gap: 24px;
+    gap: 72px 24px;
+    padding-left: 108px;
+  }
+
+  .footer-logo-input {
+    width: 264px;
+    margin-bottom: 0;
   }
 
   .footer-form {
@@ -1091,14 +1106,21 @@ img {
   .logo {
     margin-right: 76px;
   }
+
   .address-list {
+    display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
+  }
+  .address {
+    margin-left: auto;
+    font-style: normal;
   }
 
   .nav-link-address {
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
   .advantages-item {
@@ -1109,7 +1131,6 @@ img {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 24px;
   }
 
   .advantages-item {
@@ -1190,14 +1211,14 @@ img {
     margin-bottom: 8px;
   }
 
+  .portfolio-wrap:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
   .portfolio-info {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: calc((100% - 48px) / 3);
-  }
-
-  .portfolio-info:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 
   .portfolio-info:hover .portfolio-text-scroll {
@@ -1205,8 +1226,85 @@ img {
   }
 
   .footer-wrapp {
-    align-items: baseline;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 15px;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .footer-logo-right {
+    margin-right: 80px;
+    margin-bottom: 0px;
+  }
+
+  .footer-logo-left {
+    min-width: 264px;
+    margin-bottom: 0px;
+    margin-right: 120px;
+  }
+  .footer-form {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .footer {
+    padding: 100px 0;
+  }
+
+
+  .footer-logo-input {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .footer-logo-input::placeholder {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  .subscribe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    min-width: 165px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4d5ae5;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .subscribe-btn:hover,
+  .subscribe-btn:focus {
+    background-color: #404bbf;
+  }
+
+  .sub-icon {
+    margin-left: 16px;
+  }
+
+  .subscribe-lable {
+    line-height: 1.17;
   }
 }
